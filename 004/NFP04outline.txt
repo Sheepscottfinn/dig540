@@ -1,0 +1,41 @@
+Northside Folklore Project
+How’s It Goin’ Boy?
+Diane Hoppe
+
+In 2005, RTE Radio (Irish National radio/television) broadcast a 6 part oral history program documenting
+the perspective of many residents of Cork City titled "How's it Goin' Boy?". The program was sponsored and produced
+by University College Cork, the Northside Folklore Project, RTE, with a grant from Cork - European Capitol of Culture 2005. 
+Participants included: Producers, interviewers/photographers, and contributors.
+The contributors and their stories are the focus of the project. Each interview is stored on an individual tape which has been numbered, documented and transcribed. 
+
+The interviews documented what it is/was like to live in Cork.The stories are as diverse as the contributors. 
+The stories fell into the following topics: Neighborhoods, Cork history, Family, Food, Immigration, Cork City,and Sports.
+How's it Goin' Boy? is an oral history project documenting the relationship of residents of Cork City, Ireland in 2005. 
+The project was made into an audio CD, then into a physical exhibit and book in 2007 which included photographs and text.
+
+The contextual understanding of the project was enhanced when the original audio project expanded to include photographs in 
+	an exhibition and publication of the same name in 2007.
+
+PNG Guide:
+
+Northside Folklore Project (NFP04) contains: ID, title, participant, date,and meduim (radio, CD, and publication/book)
+
+There are 3 Meduims: Radio_episode, Disc, and Publication/Book
+
+	RadioEpisode includes: ID, Episode# & Topic, Date Aired, contributor,and Stories included
+	Disc contains: ID, title,tracks
+		Tracks are broken down by: ID, story, and length
+	Book includes: Book ID#, Chapter (topic), and Page (story)
+
+The Interviews include:interview ID, Date of interview, the tape#(primary) where the interview can be found, the Contributor (primary), 
+
+Topic Names include (neighborhoods, Cork past, Family, food, immigration, Cork City,and sports), who contributed stories,
+	and those stories.
+The contributors were the interviewees who told unique stories of their relationship with Cork.This table includes their ID#, name,	
+	the tape#, their country/place of origin, and their stories.
+
+The stories are the central theme in this project. each story has its own ID, its relationship to which interview (tape# and contributoretc.),
+	 each story falls under one of the topics, 
+	The stories that are included in the project can be accessed through each of the medium tables: RTE,Disc, or Book. 
+	NOTE:Not all of the stories were included in the productions but are included in the interview data, topic data, and contributor data. 
+	
