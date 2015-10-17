@@ -1,0 +1,7 @@
+SELECT theme_name as 'theme', media_type as 'format' FROM theme, media WHERE theme.id = media_id
+
+"family","1"
+"family","2"
+"family","3"
+
+I would like to get the themes and which format the themes are in, what I got is one theme and all three formats.
