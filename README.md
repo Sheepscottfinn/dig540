@@ -1,4 +1,4 @@
-## DIG540: Digital Collections & Exhibitions
+﻿ ## DIG540: Digital Collections & Exhibitions
 
 Syllabus v2.0, 3 credits
 
