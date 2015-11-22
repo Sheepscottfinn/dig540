@@ -18,12 +18,11 @@ public static function read($id){
   global $db;
 
   if($db){
-    $q = $db ->prepare('SELECT * FROM '' WHERE ''= ?');
-
+    $q = $db->prepare('SELECT * FROM  WHERE id = ?');
     $q->execute(array($id));
     if($item = $q->fetch()){
-      $theme = new Story($item['media'],$item['contributor'], $item['story_name'])
-      return $theme;
+      $story = new Story($item['media'],$item['contributor'], $item['story_name']);
+      return $item;
     }
   }
   return false;
@@ -37,11 +36,11 @@ public function update($_media,$_contributor,$_story_name='') {
   $this->story_name = $_story_name;
 }
 
-public function delete($$_media,$contributor,$_story_name=''){
+public function delete($_media,$contributor,$_story_name=''){
   global $db;
   if($db){
-    $db->begin transaction();
-    $q = $db->prepare('DELETE * FROM 'story' WHERE id = ?');
+    $db->beginTransaction();
+    $q = $db->prepare('DELETE * FROM "story" WHERE id = ?');
     try{
       $q = execute(array(id));
     }
@@ -55,68 +54,41 @@ public function delete($$_media,$contributor,$_story_name=''){
   return false;
 }
 
-public static function story_list
-  ($dsn = 'mysql:dbname=heroncro_story';host=local;port=3306);
-  $db-.beginTransaction();
-  $q->execute(array($id));
-  if($item = $q->fetch())  {
-  (1, 'river lee in cork'),
-  (2, 'grandad'),
-  (3, 'spring festival'),
-  (4, 'first communion'),
-  (5, 'at the quay in cork',),
-  (6, 'growing up in germany'),
-  (7, 'cold and different'),
-  (8, 'exchange studies at uc cork'),
-  (9, 'patrick street in cork city center'),
-  (10, 'walking cork'),
-  (11, 'cycling cork'),
-  (12, 'bringing traditions'),
-  (13, 'southwest cork pub music'),
-  (14, 'cork talk'),
-  (15, 'shop');
-}{
-$db->commit();
-return true;
-
-return false;
-}
 public static function find($target){
   global $db;
 
   if($db){
     $db->beginTransaction();
-  $statement = $db ->execute('SELECT * FROM 'story' WHERE 'story_name'= ? AND 'cork'=?');
-  $statement2 = $db ->execute('SELECT * FROM 'story' WHERE 'name=:name' AND 'radio'=: 'radio'');
-  $statement3 = $db ->execute('SELECT * FROM 'story' WHERE 'story_name' AND 'media'=?');
+  $statement = $db ->execute('SELECT * FROM "story" WHERE "story_name"= ? AND "cork"=?');
+  $statement2 = $db ->execute('SELECT * FROM "story" WHERE "story_name" AND "radio"=?');
+  $statement3 = $db ->execute('SELECT * FROM "story"WHERE "story_name" AND "media"=?');
 }
 {
-$story = $q->fetchAll(PDO::FETCH_CLASS, 'stoy');
+$story = $q->fetchAll(PDO::FETCH_CLASS, 'story');
 $media = $q->fetchALL(PDO::FETCH_CLASS, 'media');
 $contributor = $q->fetchAll(PDO::FETCH_CLASS, 'contributor');
 $db->commit();
+}
 return  true;
 return false;
 }
-
 public function create(){
     global $db;
-
     if($db){
       $db->beginTransaction();
-
-      $q = $db->prepare('INSERT INTO 'story' (media, contributor, story_name) VALUES (?,?,?)');
+      $q = $db->prepare('INSERT INTO "story" (media, contributor, story_name) VALUES (?,?,?)');
       try{
-        $q->execute(array($this->media,this->contributor this->story_name));
-      }catch(PDOExeptuib $e){
+        $q->execute(array($this->media, $this->contributor, $this->story_name));
+      }
+      catch(PDOExeption $e){
         print_r($e);
         $db->rollback();
         return false;
       }
       $this->id = $db->lastInsertID();
         $db->commit();
+      }
         return true;
-    }
     return false;
   }
     public function setID($newID){

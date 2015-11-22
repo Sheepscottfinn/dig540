@@ -53,11 +53,12 @@ $theme->create();
 
 <?php if(isset($theme)){ ?>
   <p>The story entered was"<?php echo $theme->story; ?>". It was given ID <?php echo $theme->id ?> in the database</p>
-  <?php} else{
+  <?php } else {
     $theme = Story::read(1);
     ?>
-    <p>The story entered was "<?php echo $theme->story;?>".It was given ID <?php echo $theme->id ?> in the database</p>
-<?php} ?>
+    <p>The story entered was "<?php echo $theme->story; ?>".<br/>
+       It was given ID of: <?php echo $theme->id ?> in the database. </p>
+<?php } ?>
       </body>
 </html>
 
@@ -75,7 +76,7 @@ $theme->delete();
     <title>Delete Story</title>
   </head>
   <body>
-  Delete storiy from Database:<br/><br/>
+  Delete story from Database:<br/><br/>
     <form method="POST" action="">
     Delete a Media type:
       <input type="text" name="media"></input><br/>

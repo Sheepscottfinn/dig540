@@ -1,16 +1,13 @@
 <?php
-$dsn = 'mysql:dbname=heroncro_folklore';host=local;port=3306;
-$name = 'heroncro@localhost';
-$pass = '.&s}w_#6g#+n';
-
+$dsn = 'mysql:dbname=heroncro_folklore;host=localhost;port=3306';
+$name = 'heroncro_dbhoppe';
+$pass = '8ah!iC{FnmSV';
 $db = false;
-
 //connect to the database
-
 try {
   $db=new PDO($dsn, $name, $pass);
-  $db->setAttributes(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+  $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 } catch (PDOexception $e) {
-  die('Could not connect to the database:<br/>', $e);
+  die('Could not connect to the database:<br/>'. $e);
 }
 ?>
