@@ -1,5 +1,5 @@
 <?php
-class SDocents{
+class Docents{
   private $id;
   private $name;
   private $contact;
@@ -9,7 +9,7 @@ class SDocents{
 
   //creating a new docent file
 
-    public function _construct($_name,$_contact,$_availability, $_specialty,$_research='') {
+    public function construct($_name,$_contact,$_availability, $_specialty,$_research='') {
       if(empty($name)) return false;
 
       $this->name = $_name;
@@ -87,7 +87,7 @@ public function create(){
     global $db;
     if($db){
       $db->beginTransaction();
-      $q = $db->prepare('INSERT INTO "docents" (name, contact, availability,specialty,research) VALUES (?,?,?)');
+      $q = $db->prepare('INSERT INTO "docents" (name, contact, availability, specialty, research) VALUES (?,?,?)');
       try{
         $q->execute(array($this->name, $this->contact, $this->availability, $this->specialty, $this->research));
       }

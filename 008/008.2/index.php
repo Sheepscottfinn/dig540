@@ -3,7 +3,7 @@ require_once('config.php');
 require_once('Docents.php');
 
 if(isset($_POST['submit'])){
-  $docents = newDocents($_POST['name'], $_POST['contact'],
+  $docents = new Docents($_POST['name'], $_POST['contact'],
   $_POST['availability'],$_POST['specialty'],$POST['research']);
 $docents->create();
 }
@@ -27,26 +27,24 @@ $docents->create();
 Enter Docent research interests:
       <input type="text" name="research"></input><br/>
 
-      <input type="submit" name="submit" value="submit"></input><br/>
+      <input type="submit" name="submit" value="submit docent information"></input><br/>
     </form>
-</body>
-</html>
+
 
 <?php
     require_once('config.php');
     require_once('Docents.php');
 
     if(isset($_POST['submit'])){
-    $docents = newDocents($_POST['name'], $_POST['contact'],
+    $docents = new Docents($_POST['name'], $_POST['contact'],
     $_POST['availability'],$_POST['specialty'],$POST['research']);
     $docents->update();
   }
 ?>
-<html>
-  <head>
+<head>
     <title>Update Docent</title>
   </head>
-  <body>
+
     Update Docent in Database:<br/><br/>
     <form method="POST" action="">
       Enter new Docent name:
@@ -59,28 +57,25 @@ Enter Docent research interests:
         <input type="text" name="specialty"></input><br/>
       Update research interest:
         <input type="text" name="research"></input><br/>
-      <input type="submit" name="submit" value="submit"></input><br/>
+      <input type="submit" name="submit" value="update information"></input><br/>
     </form>
 
 
-      </body>
-</html>
+
 
 <?php
 require_once('config.php');
 require_once('Docents.php');
 
 if(isset($_POST['submit'])){
-$docents = newDocents($_POST['name'], $_POST['contact'],
+$docents = new Docents($_POST['name'], $_POST['contact'],
 $_POST['availability'],$_POST['specialty'],$POST['research']);
-$docents->update();
+$docents->delete();
 }
 ?>
-<html>
-  <head>
+<head>
     <title>Delete Docent Information</title>
-  </head>
-  <body>
+</head>
   Delete Docent from schedule:<br/><br/>
     <form method="POST" action="">
     Delete contact information:
@@ -89,7 +84,7 @@ $docents->update();
       <input type="text" name="availability"></input><br/>
     Delete docent specialty:
       <input type="text" name="specialty"></input><br/>
-      <input type="submit" name="submit" value="submit"></input><br/>
+      <input type="submit" name="submit" value="delete information"></input><br/>
     </form>
   </body>
   </html>
